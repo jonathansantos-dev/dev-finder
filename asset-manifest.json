@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/dev-finder/static/js/main.9aaf91bf.chunk.js",
-    "main.js.map": "/dev-finder/static/js/main.9aaf91bf.chunk.js.map",
+    "main.js": "/dev-finder/static/js/main.db9cb97d.chunk.js",
+    "main.js.map": "/dev-finder/static/js/main.db9cb97d.chunk.js.map",
     "runtime-main.js": "/dev-finder/static/js/runtime-main.4a3e1d3e.js",
     "runtime-main.js.map": "/dev-finder/static/js/runtime-main.4a3e1d3e.js.map",
-    "static/js/2.204552d9.chunk.js": "/dev-finder/static/js/2.204552d9.chunk.js",
-    "static/js/2.204552d9.chunk.js.map": "/dev-finder/static/js/2.204552d9.chunk.js.map",
+    "static/js/2.4365bd1c.chunk.js": "/dev-finder/static/js/2.4365bd1c.chunk.js",
+    "static/js/2.4365bd1c.chunk.js.map": "/dev-finder/static/js/2.4365bd1c.chunk.js.map",
     "index.html": "/dev-finder/index.html",
-    "precache-manifest.676353725a2bb082a9863bf0e67486e2.js": "/dev-finder/precache-manifest.676353725a2bb082a9863bf0e67486e2.js",
+    "precache-manifest.a12b2d3b872a9fbe715469abe34ec8d3.js": "/dev-finder/precache-manifest.a12b2d3b872a9fbe715469abe34ec8d3.js",
     "service-worker.js": "/dev-finder/service-worker.js",
-    "static/js/2.204552d9.chunk.js.LICENSE.txt": "/dev-finder/static/js/2.204552d9.chunk.js.LICENSE.txt"
+    "static/js/2.4365bd1c.chunk.js.LICENSE.txt": "/dev-finder/static/js/2.4365bd1c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4a3e1d3e.js",
-    "static/js/2.204552d9.chunk.js",
-    "static/js/main.9aaf91bf.chunk.js"
+    "static/js/2.4365bd1c.chunk.js",
+    "static/js/main.db9cb97d.chunk.js"
   ]
 }
