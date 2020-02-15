@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom'
 import {Home, Results, Details} from './pages/index'
+
 // routes config
 function App() {
   return (
