@@ -5,4 +5,5 @@ export const Span = styled.span `
     margin: 0 auto;
     text-align: center;
     padding: 10px 0;
+    font-size: 12px;
 `
