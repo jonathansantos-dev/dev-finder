@@ -2,6 +2,18 @@ import styled from "styled-components"
 
 export const Form = styled.form `
     display: block;
+    a {
+        display: block;
+        width: 290px;
+        background-color: #009f3c;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        text-align: center;
+        padding: 5px 0;
+        border: none;
+        text-decoration: none;
+    }
 `;
 
 export const Label = styled.label `
@@ -21,14 +33,3 @@ export const Input = styled.input `
     border-bottom: 1px solid #2d2d2d;
 `;
 
-export const Button = styled.button `
-    display: block;
-    width: 290px;
-    background-color: #009f3c;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 600;
-    text-align: center;
-    padding: 5px 0;
-    border: none;
-`;

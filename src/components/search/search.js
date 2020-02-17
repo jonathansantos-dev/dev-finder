@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import {Form, Label, Input, Button} from "./styled"
+import { Link } from 'react-router-dom'
+
+import {Form, Label, Input} from "./styled"
 
 
 export default function Search() {
@@ -8,16 +10,12 @@ export default function Search() {
     function handleChange (e) {
         setName(e.target.value)
     }
-    function handleSubmit(e) {
-        e.preventDefault()
-        console.log(name)
-    }
-    
+
     return (
-        <Form onSubmit={(e) => handleSubmit(e)}>
+        <Form >
             <Label>Busque por nome de usuário</Label>
             <Input placeholder="Digite aqui" onChange={(e) => handleChange(e)}/>
-            <Button type="submit">BUSCAR DEVS</Button>
+            <Link to={`/results?user=${name}`} type="submit">BUSCAR DEVS</Link>
         </Form>
     );
 }

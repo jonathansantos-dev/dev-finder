@@ -5,5 +5,5 @@ export const Content = styled.div `
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 20px 0;
+    margin: 20px;
 `
