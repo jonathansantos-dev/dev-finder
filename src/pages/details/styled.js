@@ -14,19 +14,44 @@ export const Main = styled.main `
 
 export const Span = styled.span `
     display: block;
-    padding: 10px 0;
     font-size: 15px;
+    margin-top: ${props => `${props.marginTop}px`};
     strong {
         font-weight: bold;
     }
 `
 
+export const Avatar = styled.figure `
+    display: block;
+    max-width: 200px;
+    margin: 0;
+    img {
+        width: auto;
+    }
+`
+
+export const Block = styled.div `
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+`
+
+export const Side = styled.div `
+    display: block;
+    max-width: 200px;
+    flex: 0 1 250px;
+    img {
+        width: 100%;
+    }
+`
+
 export const Lista = styled.ul `
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 20px;
     max-height: calc(100vh - 250px);
     overflow-y: auto;
     padding-right: 10px;
+    flex: 1 1 auto;
     a {
         display: block;
         background-color: #0669b2;
@@ -40,7 +65,7 @@ export const Lista = styled.ul `
     }
 `
 
-export const User = styled.li `
+export const Repo = styled.li `
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -54,11 +79,3 @@ export const User = styled.li `
     }
 `
 
-export const Avatar = styled.figure `
-    display: block;
-    max-width: 30px;
-    margin: 0 15px 0 0;
-    img {
-        width: 100%;
-    }
-`

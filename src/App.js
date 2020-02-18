@@ -10,7 +10,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/results/:searched" component={Results}/>
-        <Route exact path="/details/:user" component={Details}/>
+        <Route exact path="/details/:name" component={Details}/>
       </Switch>
     </div>
   );
