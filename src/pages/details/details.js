@@ -5,7 +5,7 @@ import Footer from "../../components/footer/footer"
 
 import { Content, Main, Span, Avatar, Block, Side, Lista, Repo } from "./styled"
 import axios from 'axios';
-import { Link } from 'react-router-dom'
+
 
 export default function Results(props) {
     const [user, setUser] = useState([])

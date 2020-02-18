@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
 import {Form, Label, Input, Button} from "./styled"
 
 
 export default function Search() {
     const [name, setName] = useState ('')
+    const history = useHistory()
 
     function handleChange (e) {
         setName(e.target.value)
@@ -13,11 +14,12 @@ export default function Search() {
 
     function handleSubmit (e) {
         e.preventDefault()
-        window.location = (`/devfinder#/results/${name}`)
+        history.push(`/results/${name}`)
+        
     }
 
     return (
-        <Form onSubmit={(e) => handleSubmit(e)}>
+        <Form onSubmit={handleSubmit}>
         {/* <Form> */}
             <Label>Busque por nome de usuário</Label>
             <Input placeholder="Digite aqui" onChange={(e) => handleChange(e)}/>
