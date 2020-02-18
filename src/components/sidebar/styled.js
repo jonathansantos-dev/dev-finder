@@ -6,6 +6,6 @@ export const Sidebar = styled.div `
     justify-content: space-between;
     margin: 20px 0;
     padding: 15px;
-    border: 1px solid #cecece;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
     flex: 0 1 300px;
 `

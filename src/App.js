@@ -7,7 +7,7 @@ import "./assets/css/default.scss"
 function App() {
   return (
     <div className="container">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/results/:searched" component={Results}/>
