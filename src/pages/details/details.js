@@ -17,16 +17,18 @@ export default function Results(props) {
             const name = params.name;
             await axios.get(` https://api.github.com/users/${name}`)
                 .then(data => setUser(data.data)
-                )}
+            )
+        }
         async function getRepos(){
             const { match: { params } } = props;
             const name = params.name;
             await axios.get(`https://api.github.com/users/${name}/repos`)
                 .then(data => {
-                    console.log(data.data)
                     return setRepos(data.data)
                 }
-                )}
+            )
+            
+        }
         getuser()
         getRepos()
         
@@ -54,7 +56,7 @@ export default function Results(props) {
                             {repos.map((item, index) => (
                                 <Repo key={index}>
                                     <Span>{item.name}</Span>
-                                    <a href={item.html_url}>ver no GitHub</a>
+                                    <a href={item.html_url} target="_blank" rel="noopener noreferrer">ver no GitHub</a>
                                 </Repo>
                             ))}
                         </Lista>
