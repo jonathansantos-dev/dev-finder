@@ -3,8 +3,9 @@ import Sidebar from "../../components/sidebar/sidebar"
 import Header from "../../components/header/header"
 import Footer from "../../components/footer/footer"
 
-import { Content, Main, Span} from "./styled"
+import { Content, Main, Span, Lista, User, Avatar} from "./styled"
 import axios from 'axios';
+import { Link } from 'react-router-dom'
 
 export default function Results(props) {
     const [users, setUsers] = useState([])
@@ -16,8 +17,12 @@ export default function Results(props) {
             const { match: { params } } = props;
             const searched = params.searched;
             axios.get(`https://api.github.com/search/users?q=${searched}`)
-                .then(data => setUsers(data.data.items))
-        }
+                .then(data => {
+                    console.log(data.data.items)
+                    return setUsers(data.data.items)
+                })
+                // .then(data => console.log(data.data.items))
+        }     
         getuser()
     }, [props])
     
@@ -28,9 +33,15 @@ export default function Results(props) {
                 <Header/>
                 <Main>
                     <Span>Resultado da busca:</Span>
-                    {users.map((item, index) => (
-                        <li key={index}>{item.login}</li>
-                    ))}
+                    <Lista>
+                        {users.map((item, index) => (
+                            <User key={index}>
+                                <Avatar><img src={item.avatar_url} alt={item.login}/></Avatar>
+                                <span>{item.login}</span>
+                                <Link to={`/details/${item.login}`}>Ver detalhes</Link>
+                            </User>
+                        ))}
+                    </Lista>
                 </Main>
                 <Footer/>
             </Content>
