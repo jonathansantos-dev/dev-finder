@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom'
 
-import {Form, Label, Input} from "./styled"
+import {Form, Label, Input, Button} from "./styled"
 
 
 export default function Search() {
@@ -11,11 +10,16 @@ export default function Search() {
         setName(e.target.value)
     }
 
+    function handleSubmit (e) {
+        e.preventDefault()
+        window.location = (`/devfinder#/results/${name}`)
+    }
+
     return (
-        <Form >
+        <Form onSubmit={(e) => handleSubmit(e)}>
             <Label>Busque por nome de usuário</Label>
             <Input placeholder="Digite aqui" onChange={(e) => handleChange(e)}/>
-            <Link to={`/results?user=${name}`} type="submit">BUSCAR DEVS</Link>
+            <Button type="submit">BUSCAR DEVS</Button>
         </Form>
     );
 }

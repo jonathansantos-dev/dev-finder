@@ -3,20 +3,23 @@ import Sidebar from "../../components/sidebar/sidebar"
 import Header from "../../components/header/header"
 import Footer from "../../components/footer/footer"
 
-import { Content, Main, Span, User } from "./styled"
+import { Content, Main, Span} from "./styled"
+import axios from 'axios';
 
-export default function Results() {
-    // const [user, setUser] = useState({})
-
+export default function Results(props) {
+    const [users, setUsers] = useState([])
+    
+    
+    
     useEffect(() => {
-        console.log('oi')
         async function getuser(){
-            // get url param
-
-            const response = await fetch(`https://api.github.com/users/`)
+            const { match: { params } } = props;
+            const searched = params.searched;
+            axios.get(`https://api.github.com/search/users?q=${searched}`)
+                .then(data => setUsers(data.data.items))
         }
-        getuser();
-    }, [])
+        getuser()
+    }, [props])
     
     return (
         <div className="container__wrapper">
@@ -25,9 +28,9 @@ export default function Results() {
                 <Header/>
                 <Main>
                     <Span>Resultado da busca:</Span>
-                    <User>
-
-                    </User>
+                    {users.map((item, index) => (
+                        <li key={index}>{item.login}</li>
+                    ))}
                 </Main>
                 <Footer/>
             </Content>
