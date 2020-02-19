@@ -8,7 +8,7 @@ export default function Info() {
             <Block>
                 <Span><strong>Desenvolvido por:</strong> Jonathan Castro dos Santos</Span>
                 <Span><strong>GitHub:</strong> JonnyCSantos</Span>
-                <Span><strong>Linkedin:</strong> <a href="www.linkedin.com/in/jonathan-santos-desenvolvedor-web/" target="_blank" rel="noopener noreferrer">/in/jonathan-santos-desenvolvedor-web/</a></Span>
+                <Span><strong>Linkedin:</strong> <a href="https://www.linkedin.com/in/jonathan-santos-desenvolvedor-web/" target="_blank" rel="noopener noreferrer">/in/jonathan-santos-desenvolvedor-web/</a></Span>
             </Block>
         </div>
     );

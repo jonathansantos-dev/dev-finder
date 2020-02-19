@@ -15,7 +15,7 @@ export default function Search() {
     function handleSubmit (e) {
         e.preventDefault()
         history.push(`/results/${name}`)
-        
+         
     }
 
     return (
